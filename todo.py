@@ -18,6 +18,10 @@ def delete_tasks(tasks, remove):
     tasks.pop(remove)
     
 # Step 5: Mark task complete
+def mark_complete(index):
+    if 0 <= index < len(tasks):
+        tasks[index] = tasks[index] + "✅"
+
 
 
 # Step 6: Save/load tasks (extra stretch for today)
@@ -27,9 +31,7 @@ def delete_tasks(tasks, remove):
 if __name__ == "__main__":
     add_task("Finish Cyber 201 assignment")
     add_task("Push code to GitHub")
-    view_tasks()
     delete_tasks(tasks,0)
     view_tasks()
-    #mark_complete(0)
-    #view_tasks()
+    mark_complete(0)
     #save_tasks()
